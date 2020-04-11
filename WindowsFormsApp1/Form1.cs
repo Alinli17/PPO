@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "_База_данных__Аптека_DataSet.Аптека". При необходимости она может быть перемещена или удалена.
-            this.аптекаTableAdapter.Fill(this._База_данных__Аптека_DataSet.Аптека);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bD_AptekaDataSet.Apteka". При необходимости она может быть перемещена или удалена.
+            this.aptekaTableAdapter.Fill(this.bD_AptekaDataSet.Apteka);
             data_base.data_recover(dataGridView1, ap_list);
         }
 
@@ -46,9 +46,9 @@ namespace WindowsFormsApp1
             if (dr == DialogResult.OK)
             {
                 this.Validate();
-                this.аптекаBindingSource.EndEdit();
-                this.аптекаTableAdapter.Update(this._База_данных__Аптека_DataSet.Аптека);
-                _База_данных__Аптека_DataSet.Tables[0].AcceptChanges();
+                this.aptekaBindingSource.EndEdit();
+                this.aptekaTableAdapter.Update(this.bD_AptekaDataSet.Apteka);
+                bD_AptekaDataSet.Tables[0].AcceptChanges();
                 data_base.data_update(this.dataGridView1, this.ap_list);
                 MessageBox.Show("Изменения сохранены!");
             }
@@ -64,29 +64,8 @@ namespace WindowsFormsApp1
             if (dr == DialogResult.Cancel) e.Cancel = true;
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            AddForm af = new AddForm();
-            af.Owner = this;
-            af.Show();
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e) 
+        private void add_Click(object sender, EventArgs e)
         {
             if (name_medicine.Text != "" && type.Text != "" && price.Text != "" && quantity.Text != "")
             {
@@ -97,7 +76,7 @@ namespace WindowsFormsApp1
                 MessageBoxDefaultButton.Button2);
                 if (dr == DialogResult.OK)
                 {
-                    DataRow nRow = _База_данных__Аптека_DataSet.Tables[0].NewRow();
+                    DataRow nRow = bD_AptekaDataSet.Tables[0].NewRow();
                     nRow["Название товара"] = name_medicine.Text.ToString();
                     nRow["Форма/Тип"] = type.Text.ToString();
                     nRow["Стоимость"] = price.Text.ToString();
@@ -105,9 +84,9 @@ namespace WindowsFormsApp1
                     nRow["Поставщик"] = the_supplier.Text.ToString();
                     nRow["Дата доставки"] = date_delivery.Text.ToString();
 
-                    _База_данных__Аптека_DataSet.Tables[0].Rows.Add(nRow);
-                    аптекаTableAdapter.Update(_База_данных__Аптека_DataSet.Аптека);
-                    _База_данных__Аптека_DataSet.Tables[0].AcceptChanges();
+                    bD_AptekaDataSet.Tables[0].Rows.Add(nRow);
+                    aptekaTableAdapter.Update(bD_AptekaDataSet.Apteka);
+                    bD_AptekaDataSet.Tables[0].AcceptChanges();
                     dataGridView1.Refresh();
                     data_base.data_update(dataGridView1, ap_list);
                     name_medicine.Clear();
@@ -128,7 +107,6 @@ namespace WindowsFormsApp1
             }
 
         }
-
         private void save_Click_1(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Изменить запись?",
@@ -212,7 +190,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             if (po_nazvaniy_lekarstva.Checked)
             {
@@ -277,12 +255,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void off_Click(object sender, EventArgs e)
         {
             dataGridView1.BringToFront();

@@ -20,17 +20,17 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_База_данных__Аптека_DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BD_AptekaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _База_данных__Аптека_DataSet : global::System.Data.DataSet {
+    public partial class BD_AptekaDataSet : global::System.Data.DataSet {
         
-        private АптекаDataTable tableАптека;
+        private AptekaDataTable tableApteka;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public _База_данных__Аптека_DataSet() {
+        public BD_AptekaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected _База_данных__Аптека_DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BD_AptekaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WindowsFormsApp1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Аптека"] != null)) {
-                    base.Tables.Add(new АптекаDataTable(ds.Tables["Аптека"]));
+                if ((ds.Tables["Apteka"] != null)) {
+                    base.Tables.Add(new AptekaDataTable(ds.Tables["Apteka"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WindowsFormsApp1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public АптекаDataTable Аптека {
+        public AptekaDataTable Apteka {
             get {
-                return this.tableАптека;
+                return this.tableApteka;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _База_данных__Аптека_DataSet cln = ((_База_данных__Аптека_DataSet)(base.Clone()));
+            BD_AptekaDataSet cln = ((BD_AptekaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WindowsFormsApp1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Аптека"] != null)) {
-                    base.Tables.Add(new АптекаDataTable(ds.Tables["Аптека"]));
+                if ((ds.Tables["Apteka"] != null)) {
+                    base.Tables.Add(new AptekaDataTable(ds.Tables["Apteka"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableАптека = ((АптекаDataTable)(base.Tables["Аптека"]));
+            this.tableApteka = ((AptekaDataTable)(base.Tables["Apteka"]));
             if ((initTable == true)) {
-                if ((this.tableАптека != null)) {
-                    this.tableАптека.InitVars();
+                if ((this.tableApteka != null)) {
+                    this.tableApteka.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_База_данных__Аптека_DataSet";
+            this.DataSetName = "BD_AptekaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_База_данных__Аптека_DataSet.xsd";
+            this.Namespace = "http://tempuri.org/BD_AptekaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableАптека = new АптекаDataTable();
-            base.Tables.Add(this.tableАптека);
+            this.tableApteka = new AptekaDataTable();
+            base.Tables.Add(this.tableApteka);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeАптека() {
+        private bool ShouldSerializeApteka() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _База_данных__Аптека_DataSet ds = new _База_данных__Аптека_DataSet();
+            BD_AptekaDataSet ds = new BD_AptekaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace WindowsFormsApp1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void АптекаRowChangeEventHandler(object sender, АптекаRowChangeEvent e);
+        public delegate void AptekaRowChangeEventHandler(object sender, AptekaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class АптекаDataTable : global::System.Data.TypedTableBase<АптекаRow> {
+        public partial class AptekaDataTable : global::System.Data.TypedTableBase<AptekaRow> {
             
             private global::System.Data.DataColumn columnКод;
             
@@ -295,8 +295,8 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаDataTable() {
-                this.TableName = "Аптека";
+            public AptekaDataTable() {
+                this.TableName = "Apteka";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +304,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal АптекаDataTable(global::System.Data.DataTable table) {
+            internal AptekaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,7 +321,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected АптекаDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AptekaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -393,34 +393,34 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRow this[int index] {
+            public AptekaRow this[int index] {
                 get {
-                    return ((АптекаRow)(this.Rows[index]));
+                    return ((AptekaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event АптекаRowChangeEventHandler АптекаRowChanging;
+            public event AptekaRowChangeEventHandler AptekaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event АптекаRowChangeEventHandler АптекаRowChanged;
+            public event AptekaRowChangeEventHandler AptekaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event АптекаRowChangeEventHandler АптекаRowDeleting;
+            public event AptekaRowChangeEventHandler AptekaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event АптекаRowChangeEventHandler АптекаRowDeleted;
+            public event AptekaRowChangeEventHandler AptekaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddАптекаRow(АптекаRow row) {
+            public void AddAptekaRow(AptekaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRow AddАптекаRow(string Название_товара, string _Форма_Тип, int Стоимость, int _Кол_во, string Поставщик, System.DateTime Дата_доставки) {
-                АптекаRow rowАптекаRow = ((АптекаRow)(this.NewRow()));
+            public AptekaRow AddAptekaRow(string Название_товара, string _Форма_Тип, int Стоимость, int _Кол_во, string Поставщик, System.DateTime Дата_доставки) {
+                AptekaRow rowAptekaRow = ((AptekaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Название_товара,
@@ -429,22 +429,22 @@ namespace WindowsFormsApp1 {
                         _Кол_во,
                         Поставщик,
                         Дата_доставки};
-                rowАптекаRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowАптекаRow);
-                return rowАптекаRow;
+                rowAptekaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAptekaRow);
+                return rowAptekaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRow FindByКод(int Код) {
-                return ((АптекаRow)(this.Rows.Find(new object[] {
+            public AptekaRow FindByКод(int Код) {
+                return ((AptekaRow)(this.Rows.Find(new object[] {
                             Код})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                АптекаDataTable cln = ((АптекаDataTable)(base.Clone()));
+                AptekaDataTable cln = ((AptekaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -452,7 +452,7 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new АптекаDataTable();
+                return new AptekaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -502,28 +502,28 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRow NewАптекаRow() {
-                return ((АптекаRow)(this.NewRow()));
+            public AptekaRow NewAptekaRow() {
+                return ((AptekaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new АптекаRow(builder);
+                return new AptekaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(АптекаRow);
+                return typeof(AptekaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.АптекаRowChanged != null)) {
-                    this.АптекаRowChanged(this, new АптекаRowChangeEvent(((АптекаRow)(e.Row)), e.Action));
+                if ((this.AptekaRowChanged != null)) {
+                    this.AptekaRowChanged(this, new AptekaRowChangeEvent(((AptekaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -531,8 +531,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.АптекаRowChanging != null)) {
-                    this.АптекаRowChanging(this, new АптекаRowChangeEvent(((АптекаRow)(e.Row)), e.Action));
+                if ((this.AptekaRowChanging != null)) {
+                    this.AptekaRowChanging(this, new AptekaRowChangeEvent(((AptekaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -540,8 +540,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.АптекаRowDeleted != null)) {
-                    this.АптекаRowDeleted(this, new АптекаRowChangeEvent(((АптекаRow)(e.Row)), e.Action));
+                if ((this.AptekaRowDeleted != null)) {
+                    this.AptekaRowDeleted(this, new AptekaRowChangeEvent(((AptekaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -549,14 +549,14 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.АптекаRowDeleting != null)) {
-                    this.АптекаRowDeleting(this, new АптекаRowChangeEvent(((АптекаRow)(e.Row)), e.Action));
+                if ((this.AptekaRowDeleting != null)) {
+                    this.AptekaRowDeleting(this, new AptekaRowChangeEvent(((AptekaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveАптекаRow(АптекаRow row) {
+            public void RemoveAptekaRow(AptekaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -565,7 +565,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _База_данных__Аптека_DataSet ds = new _База_данных__Аптека_DataSet();
+                BD_AptekaDataSet ds = new BD_AptekaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -583,7 +583,7 @@ namespace WindowsFormsApp1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "АптекаDataTable";
+                attribute2.FixedValue = "AptekaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -627,25 +627,25 @@ namespace WindowsFormsApp1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class АптекаRow : global::System.Data.DataRow {
+        public partial class AptekaRow : global::System.Data.DataRow {
             
-            private АптекаDataTable tableАптека;
+            private AptekaDataTable tableApteka;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal АптекаRow(global::System.Data.DataRowBuilder rb) : 
+            internal AptekaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableАптека = ((АптекаDataTable)(this.Table));
+                this.tableApteka = ((AptekaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Код {
                 get {
-                    return ((int)(this[this.tableАптека.КодColumn]));
+                    return ((int)(this[this.tableApteka.КодColumn]));
                 }
                 set {
-                    this[this.tableАптека.КодColumn] = value;
+                    this[this.tableApteka.КодColumn] = value;
                 }
             }
             
@@ -654,14 +654,14 @@ namespace WindowsFormsApp1 {
             public string Название_товара {
                 get {
                     try {
-                        return ((string)(this[this.tableАптека.Название_товараColumn]));
+                        return ((string)(this[this.tableApteka.Название_товараColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название товара\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название товара\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека.Название_товараColumn] = value;
+                    this[this.tableApteka.Название_товараColumn] = value;
                 }
             }
             
@@ -670,14 +670,14 @@ namespace WindowsFormsApp1 {
             public string _Форма_Тип {
                 get {
                     try {
-                        return ((string)(this[this.tableАптека._Форма_ТипColumn]));
+                        return ((string)(this[this.tableApteka._Форма_ТипColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Форма/Тип\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Форма/Тип\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека._Форма_ТипColumn] = value;
+                    this[this.tableApteka._Форма_ТипColumn] = value;
                 }
             }
             
@@ -686,14 +686,14 @@ namespace WindowsFormsApp1 {
             public int Стоимость {
                 get {
                     try {
-                        return ((int)(this[this.tableАптека.СтоимостьColumn]));
+                        return ((int)(this[this.tableApteka.СтоимостьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека.СтоимостьColumn] = value;
+                    this[this.tableApteka.СтоимостьColumn] = value;
                 }
             }
             
@@ -702,14 +702,14 @@ namespace WindowsFormsApp1 {
             public int _Кол_во {
                 get {
                     try {
-                        return ((int)(this[this.tableАптека._Кол_воColumn]));
+                        return ((int)(this[this.tableApteka._Кол_воColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Кол-во\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Кол-во\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека._Кол_воColumn] = value;
+                    this[this.tableApteka._Кол_воColumn] = value;
                 }
             }
             
@@ -718,14 +718,14 @@ namespace WindowsFormsApp1 {
             public string Поставщик {
                 get {
                     try {
-                        return ((string)(this[this.tableАптека.ПоставщикColumn]));
+                        return ((string)(this[this.tableApteka.ПоставщикColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Поставщик\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Поставщик\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека.ПоставщикColumn] = value;
+                    this[this.tableApteka.ПоставщикColumn] = value;
                 }
             }
             
@@ -734,87 +734,87 @@ namespace WindowsFormsApp1 {
             public System.DateTime Дата_доставки {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableАптека.Дата_доставкиColumn]));
+                        return ((global::System.DateTime)(this[this.tableApteka.Дата_доставкиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата доставки\' в таблице \'Аптека\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата доставки\' в таблице \'Apteka\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableАптека.Дата_доставкиColumn] = value;
+                    this[this.tableApteka.Дата_доставкиColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsНазвание_товараNull() {
-                return this.IsNull(this.tableАптека.Название_товараColumn);
+                return this.IsNull(this.tableApteka.Название_товараColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetНазвание_товараNull() {
-                this[this.tableАптека.Название_товараColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka.Название_товараColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is_Форма_ТипNull() {
-                return this.IsNull(this.tableАптека._Форма_ТипColumn);
+                return this.IsNull(this.tableApteka._Форма_ТипColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set_Форма_ТипNull() {
-                this[this.tableАптека._Форма_ТипColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka._Форма_ТипColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsСтоимостьNull() {
-                return this.IsNull(this.tableАптека.СтоимостьColumn);
+                return this.IsNull(this.tableApteka.СтоимостьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetСтоимостьNull() {
-                this[this.tableАптека.СтоимостьColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka.СтоимостьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is_Кол_воNull() {
-                return this.IsNull(this.tableАптека._Кол_воColumn);
+                return this.IsNull(this.tableApteka._Кол_воColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set_Кол_воNull() {
-                this[this.tableАптека._Кол_воColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka._Кол_воColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsПоставщикNull() {
-                return this.IsNull(this.tableАптека.ПоставщикColumn);
+                return this.IsNull(this.tableApteka.ПоставщикColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetПоставщикNull() {
-                this[this.tableАптека.ПоставщикColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka.ПоставщикColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsДата_доставкиNull() {
-                return this.IsNull(this.tableАптека.Дата_доставкиColumn);
+                return this.IsNull(this.tableApteka.Дата_доставкиColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetДата_доставкиNull() {
-                this[this.tableАптека.Дата_доставкиColumn] = global::System.Convert.DBNull;
+                this[this.tableApteka.Дата_доставкиColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -822,22 +822,22 @@ namespace WindowsFormsApp1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class АптекаRowChangeEvent : global::System.EventArgs {
+        public class AptekaRowChangeEvent : global::System.EventArgs {
             
-            private АптекаRow eventRow;
+            private AptekaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRowChangeEvent(АптекаRow row, global::System.Data.DataRowAction action) {
+            public AptekaRowChangeEvent(AptekaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public АптекаRow Row {
+            public AptekaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -853,7 +853,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdapters {
+namespace WindowsFormsApp1.BD_AptekaDataSetTableAdapters {
     
     
     /// <summary>
@@ -865,7 +865,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class АптекаTableAdapter : global::System.ComponentModel.Component {
+    public partial class AptekaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -879,7 +879,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public АптекаTableAdapter() {
+        public AptekaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -976,7 +976,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Аптека";
+            tableMapping.DataSetTable = "Apteka";
             tableMapping.ColumnMappings.Add("Код", "Код");
             tableMapping.ColumnMappings.Add("Название товара", "Название товара");
             tableMapping.ColumnMappings.Add("Форма/Тип", "Форма/Тип");
@@ -987,7 +987,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Аптека` WHERE ((`Код` = ?) AND ((? = 1 AND `Название товара` IS NULL) OR (`Название товара` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Кол-во` IS NULL) OR (`Кол-во` = ?)) AND ((? = 1 AND `Дата доставки` IS NULL) OR (`Дата доставки` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Apteka` WHERE ((`Код` = ?) AND ((? = 1 AND `Название товара` IS NULL) OR (`Название товара` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Кол-во` IS NULL) OR (`Кол-во` = ?)) AND ((? = 1 AND `Дата доставки` IS NULL) OR (`Дата доставки` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название_товара", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название товара", global::System.Data.DataRowVersion.Original, true, null));
@@ -1000,7 +1000,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_доставки", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата доставки", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Аптека` (`Название товара`, `Форма/Тип`, `Стоимость`, `Кол-во`, `Пос" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Apteka` (`Название товара`, `Форма/Тип`, `Стоимость`, `Кол-во`, `Пос" +
                 "тавщик`, `Дата доставки`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название товара", global::System.Data.DataRowVersion.Current, false, null));
@@ -1011,7 +1011,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_доставки", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата доставки", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Аптека` SET `Название товара` = ?, `Форма/Тип` = ?, `Стоимость` = ?, `Кол-во` = ?, `Поставщик` = ?, `Дата доставки` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Название товара` IS NULL) OR (`Название товара` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Кол-во` IS NULL) OR (`Кол-во` = ?)) AND ((? = 1 AND `Дата доставки` IS NULL) OR (`Дата доставки` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Apteka` SET `Название товара` = ?, `Форма/Тип` = ?, `Стоимость` = ?, `Кол-во` = ?, `Поставщик` = ?, `Дата доставки` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Название товара` IS NULL) OR (`Название товара` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)) AND ((? = 1 AND `Кол-во` IS NULL) OR (`Кол-во` = ?)) AND ((? = 1 AND `Дата доставки` IS NULL) OR (`Дата доставки` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_товара", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название товара", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Форма/Тип", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Форма/Тип", global::System.Data.DataRowVersion.Current, false, null));
@@ -1034,7 +1034,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.База_данных__Аптека_ConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.BD_AptekaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1044,7 +1044,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Код, [Название товара], [Форма/Тип], Стоимость, [Кол-во], Поставщик, [Дата" +
-                " доставки] FROM Аптека";
+                " доставки] FROM Apteka";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1052,7 +1052,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_База_данных__Аптека_DataSet.АптекаDataTable dataTable) {
+        public virtual int Fill(BD_AptekaDataSet.AptekaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1065,9 +1065,9 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _База_данных__Аптека_DataSet.АптекаDataTable GetData() {
+        public virtual BD_AptekaDataSet.AptekaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _База_данных__Аптека_DataSet.АптекаDataTable dataTable = new _База_данных__Аптека_DataSet.АптекаDataTable();
+            BD_AptekaDataSet.AptekaDataTable dataTable = new BD_AptekaDataSet.AptekaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1075,15 +1075,15 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_База_данных__Аптека_DataSet.АптекаDataTable dataTable) {
+        public virtual int Update(BD_AptekaDataSet.AptekaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_База_данных__Аптека_DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Аптека");
+        public virtual int Update(BD_AptekaDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Apteka");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1315,7 +1315,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         
         private UpdateOrderOption _updateOrder;
         
-        private АптекаTableAdapter _аптекаTableAdapter;
+        private AptekaTableAdapter _aptekaTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1337,12 +1337,12 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public АптекаTableAdapter АптекаTableAdapter {
+        public AptekaTableAdapter AptekaTableAdapter {
             get {
-                return this._аптекаTableAdapter;
+                return this._aptekaTableAdapter;
             }
             set {
-                this._аптекаTableAdapter = value;
+                this._aptekaTableAdapter = value;
             }
         }
         
@@ -1365,9 +1365,9 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._аптекаTableAdapter != null) 
-                            && (this._аптекаTableAdapter.Connection != null))) {
-                    return this._аптекаTableAdapter.Connection;
+                if (((this._aptekaTableAdapter != null) 
+                            && (this._aptekaTableAdapter.Connection != null))) {
+                    return this._aptekaTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1382,7 +1382,7 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._аптекаTableAdapter != null)) {
+                if ((this._aptekaTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1394,14 +1394,14 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(_База_данных__Аптека_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BD_AptekaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._аптекаTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Аптека.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._aptekaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Apteka.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._аптекаTableAdapter.Update(updatedRows));
+                    result = (result + this._aptekaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1413,13 +1413,13 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(_База_данных__Аптека_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BD_AptekaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._аптекаTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Аптека.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._aptekaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Apteka.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._аптекаTableAdapter.Update(addedRows));
+                    result = (result + this._aptekaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1431,13 +1431,13 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(_База_данных__Аптека_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BD_AptekaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._аптекаTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Аптека.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._aptekaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Apteka.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._аптекаTableAdapter.Update(deletedRows));
+                    result = (result + this._aptekaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1473,15 +1473,15 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(_База_данных__Аптека_DataSet dataSet) {
+        public virtual int UpdateAll(BD_AptekaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._аптекаTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._аптекаTableAdapter.Connection) == false))) {
+            if (((this._aptekaTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._aptekaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -1517,13 +1517,13 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._аптекаTableAdapter != null)) {
-                    revertConnections.Add(this._аптекаTableAdapter, this._аптекаTableAdapter.Connection);
-                    this._аптекаTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._аптекаTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._аптекаTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._аптекаTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._аптекаTableAdapter.Adapter);
+                if ((this._aptekaTableAdapter != null)) {
+                    revertConnections.Add(this._aptekaTableAdapter, this._aptekaTableAdapter.Connection);
+                    this._aptekaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._aptekaTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._aptekaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._aptekaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._aptekaTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1584,9 +1584,9 @@ namespace WindowsFormsApp1._База_данных__Аптека_DataSetTableAdap
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._аптекаTableAdapter != null)) {
-                    this._аптекаTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._аптекаTableAdapter]));
-                    this._аптекаTableAdapter.Transaction = null;
+                if ((this._aptekaTableAdapter != null)) {
+                    this._aptekaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._aptekaTableAdapter]));
+                    this._aptekaTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

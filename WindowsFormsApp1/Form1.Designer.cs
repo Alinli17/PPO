@@ -37,9 +37,8 @@
             this.Kolvo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Postavschik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataDostavki = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.аптекаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._База_данных__Аптека_DataSet = new WindowsFormsApp1._База_данных__Аптека_DataSet();
-            this.аптекаTableAdapter = new WindowsFormsApp1._База_данных__Аптека_DataSetTableAdapters.АптекаTableAdapter();
+            this.aptekaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bD_AptekaDataSet = new WindowsFormsApp1.BD_AptekaDataSet();
             this.save_all = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.save = new System.Windows.Forms.Button();
@@ -71,9 +70,10 @@
             this.po_nazvaniy_lekarstva = new System.Windows.Forms.RadioButton();
             this.rezyltat = new System.Windows.Forms.DataGridView();
             this.Deselect = new System.Windows.Forms.Button();
+            this.aptekaTableAdapter = new WindowsFormsApp1.BD_AptekaDataSetTableAdapters.AptekaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.аптекаBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._База_данных__Аптека_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aptekaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_AptekaDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rezyltat)).BeginInit();
@@ -92,13 +92,12 @@
             this.Kolvo,
             this.Postavschik,
             this.DataDostavki});
-            this.dataGridView1.DataSource = this.аптекаBindingSource;
+            this.dataGridView1.DataSource = this.aptekaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(983, 228);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
@@ -144,19 +143,15 @@
             this.DataDostavki.HeaderText = "Дата доставки";
             this.DataDostavki.Name = "DataDostavki";
             // 
-            // аптекаBindingSource
+            // aptekaBindingSource
             // 
-            this.аптекаBindingSource.DataMember = "Аптека";
-            this.аптекаBindingSource.DataSource = this._База_данных__Аптека_DataSet;
+            this.aptekaBindingSource.DataMember = "Apteka";
+            this.aptekaBindingSource.DataSource = this.bD_AptekaDataSet;
             // 
-            // _База_данных__Аптека_DataSet
+            // bD_AptekaDataSet
             // 
-            this._База_данных__Аптека_DataSet.DataSetName = "_База_данных__Аптека_DataSet";
-            this._База_данных__Аптека_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // аптекаTableAdapter
-            // 
-            this.аптекаTableAdapter.ClearBeforeFill = true;
+            this.bD_AptekaDataSet.DataSetName = "BD_AptekaDataSet";
+            this.bD_AptekaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // save_all
             // 
@@ -232,7 +227,7 @@
             this.add.TabIndex = 4;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.button1_Click);
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // date_delivery
             // 
@@ -281,7 +276,6 @@
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Кол-во:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -291,7 +285,6 @@
             this.label4.Size = new System.Drawing.Size(35, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "руб.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // price
             // 
@@ -386,7 +379,7 @@
             this.Find.TabIndex = 21;
             this.Find.Text = "Найти";
             this.Find.UseVisualStyleBackColor = true;
-            this.Find.Click += new System.EventHandler(this.button1_Click_1);
+            this.Find.Click += new System.EventHandler(this.search_Click);
             // 
             // po_postavchiky
             // 
@@ -433,7 +426,6 @@
             this.find_poloska.Name = "find_poloska";
             this.find_poloska.Size = new System.Drawing.Size(429, 22);
             this.find_poloska.TabIndex = 16;
-            this.find_poloska.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // po_nazvaniy_lekarstva
             // 
@@ -466,6 +458,10 @@
             this.Deselect.UseVisualStyleBackColor = true;
             this.Deselect.Click += new System.EventHandler(this.Deselect_Click);
             // 
+            // aptekaTableAdapter
+            // 
+            this.aptekaTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,8 +478,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.аптекаBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._База_данных__Аптека_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aptekaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_AptekaDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -496,9 +492,7 @@
         #endregion
 
         public System.Windows.Forms.DataGridView dataGridView1;
-        public _База_данных__Аптека_DataSet _База_данных__Аптека_DataSet;
-        public System.Windows.Forms.BindingSource аптекаBindingSource;
-        public _База_данных__Аптека_DataSetTableAdapters.АптекаTableAdapter аптекаTableAdapter;
+        //public System.Windows.Forms.BindingSource аптекаBindingSource;
         private System.Windows.Forms.Button save_all;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nazvanie;
@@ -537,6 +531,11 @@
         private System.Windows.Forms.DataGridView rezyltat;
         private System.Windows.Forms.Button off;
         private System.Windows.Forms.Button Deselect;
+        private BD_AptekaDataSet bD_AptekaDataSet;
+        private System.Windows.Forms.BindingSource aptekaBindingSource;
+        private BD_AptekaDataSetTableAdapters.AptekaTableAdapter aptekaTableAdapter;
+        //public WindowsFormsApp1._База_данных__Аптека_DataSet _База_данных__Аптека_DataSet;
+        //public WindowsFormsApp1._База_данных__Аптека_DataSetTableAdapters.АптекаTableAdapter аптекаTableAdapter;
     }
 }
 
