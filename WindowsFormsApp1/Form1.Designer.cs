@@ -40,31 +40,31 @@
             this.aptekaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bD_AptekaDataSet = new WindowsFormsApp1.BD_AptekaDataSet();
             this.save_all = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Drag_information = new System.Windows.Forms.GroupBox();
             this.save = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.date_delivery = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Delivery_Date = new System.Windows.Forms.Label();
             this.the_supplier = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Provider = new System.Windows.Forms.Label();
             this.quantity = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Amount = new System.Windows.Forms.Label();
+            this.Rub = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Cost = new System.Windows.Forms.Label();
             this.type = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Shape_Type = new System.Windows.Forms.Label();
             this.name_medicine = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Drag_name = new System.Windows.Forms.Label();
             this.delete = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Scan = new System.Windows.Forms.GroupBox();
             this.off = new System.Windows.Forms.Button();
             this.Find = new System.Windows.Forms.Button();
             this.po_postavchiky = new System.Windows.Forms.RadioButton();
             this.po_type = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Parameters = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.find_poloska = new System.Windows.Forms.TextBox();
             this.po_nazvaniy_lekarstva = new System.Windows.Forms.RadioButton();
@@ -74,8 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aptekaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_AptekaDataSet)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.Drag_information.SuspendLayout();
+            this.Scan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rezyltat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,31 +163,31 @@
             this.save_all.UseVisualStyleBackColor = true;
             this.save_all.Click += new System.EventHandler(this.Save_Click);
             // 
-            // groupBox1
+            // Drag_information
             // 
-            this.groupBox1.Controls.Add(this.save);
-            this.groupBox1.Controls.Add(this.back);
-            this.groupBox1.Controls.Add(this.edit);
-            this.groupBox1.Controls.Add(this.add);
-            this.groupBox1.Controls.Add(this.date_delivery);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.the_supplier);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.quantity);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.price);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.type);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.name_medicine);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 234);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 237);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Инфомация о препарате";
+            this.Drag_information.Controls.Add(this.save);
+            this.Drag_information.Controls.Add(this.back);
+            this.Drag_information.Controls.Add(this.edit);
+            this.Drag_information.Controls.Add(this.add);
+            this.Drag_information.Controls.Add(this.date_delivery);
+            this.Drag_information.Controls.Add(this.Delivery_Date);
+            this.Drag_information.Controls.Add(this.the_supplier);
+            this.Drag_information.Controls.Add(this.Provider);
+            this.Drag_information.Controls.Add(this.quantity);
+            this.Drag_information.Controls.Add(this.Amount);
+            this.Drag_information.Controls.Add(this.Rub);
+            this.Drag_information.Controls.Add(this.price);
+            this.Drag_information.Controls.Add(this.Cost);
+            this.Drag_information.Controls.Add(this.type);
+            this.Drag_information.Controls.Add(this.Shape_Type);
+            this.Drag_information.Controls.Add(this.name_medicine);
+            this.Drag_information.Controls.Add(this.Drag_name);
+            this.Drag_information.Location = new System.Drawing.Point(0, 234);
+            this.Drag_information.Name = "Drag_information";
+            this.Drag_information.Size = new System.Drawing.Size(511, 237);
+            this.Drag_information.TabIndex = 3;
+            this.Drag_information.TabStop = false;
+            this.Drag_information.Text = "Инфомация о препарате";
             // 
             // save
             // 
@@ -236,14 +236,14 @@
             this.date_delivery.Size = new System.Drawing.Size(142, 22);
             this.date_delivery.TabIndex = 4;
             // 
-            // label7
+            // Delivery_Date
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(299, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Дата доставки";
+            this.Delivery_Date.AutoSize = true;
+            this.Delivery_Date.Location = new System.Drawing.Point(299, 133);
+            this.Delivery_Date.Name = "Delivery_Date";
+            this.Delivery_Date.Size = new System.Drawing.Size(106, 17);
+            this.Delivery_Date.TabIndex = 10;
+            this.Delivery_Date.Text = "Дата доставки";
             // 
             // the_supplier
             // 
@@ -252,14 +252,14 @@
             this.the_supplier.Size = new System.Drawing.Size(142, 22);
             this.the_supplier.TabIndex = 4;
             // 
-            // label6
+            // Provider
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(299, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Поставщик";
+            this.Provider.AutoSize = true;
+            this.Provider.Location = new System.Drawing.Point(299, 83);
+            this.Provider.Name = "Provider";
+            this.Provider.Size = new System.Drawing.Size(81, 17);
+            this.Provider.TabIndex = 9;
+            this.Provider.Text = "Поставщик";
             // 
             // quantity
             // 
@@ -268,23 +268,23 @@
             this.quantity.Size = new System.Drawing.Size(142, 22);
             this.quantity.TabIndex = 8;
             // 
-            // label5
+            // Amount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Кол-во:";
+            this.Amount.AutoSize = true;
+            this.Amount.Location = new System.Drawing.Point(299, 34);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(57, 17);
+            this.Amount.TabIndex = 7;
+            this.Amount.Text = "Кол-во:";
             // 
-            // label4
+            // Rub
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "руб.";
+            this.Rub.AutoSize = true;
+            this.Rub.Location = new System.Drawing.Point(166, 160);
+            this.Rub.Name = "Rub";
+            this.Rub.Size = new System.Drawing.Size(35, 17);
+            this.Rub.TabIndex = 6;
+            this.Rub.Text = "руб.";
             // 
             // price
             // 
@@ -293,14 +293,14 @@
             this.price.Size = new System.Drawing.Size(104, 22);
             this.price.TabIndex = 5;
             // 
-            // label3
+            // Cost
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Стоимость:";
+            this.Cost.AutoSize = true;
+            this.Cost.Location = new System.Drawing.Point(56, 133);
+            this.Cost.Name = "Cost";
+            this.Cost.Size = new System.Drawing.Size(82, 17);
+            this.Cost.TabIndex = 4;
+            this.Cost.Text = "Стоимость:";
             // 
             // type
             // 
@@ -309,14 +309,14 @@
             this.type.Size = new System.Drawing.Size(142, 22);
             this.type.TabIndex = 3;
             // 
-            // label2
+            // Shape_Type
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Форма/Тип:";
+            this.Shape_Type.AutoSize = true;
+            this.Shape_Type.Location = new System.Drawing.Point(56, 83);
+            this.Shape_Type.Name = "Shape_Type";
+            this.Shape_Type.Size = new System.Drawing.Size(87, 17);
+            this.Shape_Type.TabIndex = 2;
+            this.Shape_Type.Text = "Форма/Тип:";
             // 
             // name_medicine
             // 
@@ -325,14 +325,14 @@
             this.name_medicine.Size = new System.Drawing.Size(142, 22);
             this.name_medicine.TabIndex = 1;
             // 
-            // label1
+            // Drag_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Название лекарства:";
+            this.Drag_name.AutoSize = true;
+            this.Drag_name.Location = new System.Drawing.Point(56, 34);
+            this.Drag_name.Name = "Drag_name";
+            this.Drag_name.Size = new System.Drawing.Size(148, 17);
+            this.Drag_name.TabIndex = 0;
+            this.Drag_name.Text = "Название лекарства:";
             // 
             // delete
             // 
@@ -344,22 +344,22 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // groupBox2
+            // Scan
             // 
-            this.groupBox2.Controls.Add(this.off);
-            this.groupBox2.Controls.Add(this.Find);
-            this.groupBox2.Controls.Add(this.po_postavchiky);
-            this.groupBox2.Controls.Add(this.po_type);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.find_poloska);
-            this.groupBox2.Controls.Add(this.po_nazvaniy_lekarstva);
-            this.groupBox2.Location = new System.Drawing.Point(517, 234);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(472, 237);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Поиск";
+            this.Scan.Controls.Add(this.off);
+            this.Scan.Controls.Add(this.Find);
+            this.Scan.Controls.Add(this.po_postavchiky);
+            this.Scan.Controls.Add(this.po_type);
+            this.Scan.Controls.Add(this.Parameters);
+            this.Scan.Controls.Add(this.label8);
+            this.Scan.Controls.Add(this.find_poloska);
+            this.Scan.Controls.Add(this.po_nazvaniy_lekarstva);
+            this.Scan.Location = new System.Drawing.Point(517, 234);
+            this.Scan.Name = "Scan";
+            this.Scan.Size = new System.Drawing.Size(472, 237);
+            this.Scan.TabIndex = 14;
+            this.Scan.TabStop = false;
+            this.Scan.Text = "Поиск";
             // 
             // off
             // 
@@ -403,14 +403,14 @@
             this.po_type.Text = "по Форме/Типу";
             this.po_type.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // Parameters
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(432, 17);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Выберите параментр, по которому будет осуществляться поис:";
+            this.Parameters.AutoSize = true;
+            this.Parameters.Location = new System.Drawing.Point(6, 34);
+            this.Parameters.Name = "Parameters";
+            this.Parameters.Size = new System.Drawing.Size(432, 17);
+            this.Parameters.TabIndex = 18;
+            this.Parameters.Text = "Выберите параментр, по которому будет осуществляться поис:";
             // 
             // label8
             // 
@@ -468,9 +468,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 533);
             this.Controls.Add(this.Deselect);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.Scan);
             this.Controls.Add(this.delete);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Drag_information);
             this.Controls.Add(this.save_all);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rezyltat);
@@ -480,10 +480,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aptekaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_AptekaDataSet)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Drag_information.ResumeLayout(false);
+            this.Drag_information.PerformLayout();
+            this.Scan.ResumeLayout(false);
+            this.Scan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rezyltat)).EndInit();
             this.ResumeLayout(false);
 
@@ -501,30 +501,30 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kolvo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Postavschik;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataDostavki;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox Drag_information;
+        private System.Windows.Forms.Label Rub;
         private System.Windows.Forms.TextBox price;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Cost;
         private System.Windows.Forms.TextBox type;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Shape_Type;
         private System.Windows.Forms.TextBox name_medicine;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Drag_name;
         private System.Windows.Forms.TextBox date_delivery;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Delivery_Date;
         private System.Windows.Forms.TextBox the_supplier;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Provider;
         private System.Windows.Forms.TextBox quantity;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Amount;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox Scan;
         private System.Windows.Forms.Button Find;
         private System.Windows.Forms.RadioButton po_postavchiky;
         private System.Windows.Forms.RadioButton po_type;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Parameters;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox find_poloska;
         private System.Windows.Forms.RadioButton po_nazvaniy_lekarstva;
